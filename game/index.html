@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skylark Run — a tiny flight game</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #0b1622; height: 100%; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; font-family: "Segoe UI", system-ui, sans-serif; }
+  #wrap { position: relative; width: min(100vw, 160vh); aspect-ratio: 8 / 5; }
+  canvas { width: 100%; height: 100%; display: block; background: #79b5e0; border-radius: 6px; }
+  #hint { position: absolute; left: 50%; bottom: 6px; transform: translateX(-50%); color: #dceeff;
+          font-size: 13px; text-shadow: 0 1px 3px rgba(0,0,0,.7); pointer-events: none; white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="800"></canvas>
+  <div id="hint">W/S or ↑/↓ pitch · A/D or ←/→ bank · Shift/Ctrl throttle · Space brake · P pause · R restart</div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
